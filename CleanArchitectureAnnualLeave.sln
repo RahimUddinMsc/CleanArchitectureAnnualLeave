@@ -15,13 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{7CC65541-9CE1-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{24CD8CF7-F65D-4B6B-BA00-29FD658874FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{9C667E9E-20D5-4C07-A039-00264CEBF6FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnualLeave.Domain", "Domain\AnnualLeave.Domain.csproj", "{9C667E9E-20D5-4C07-A039-00264CEBF6FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{C5A44FA0-F84C-4A4E-8F05-6D2BF46025CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnualLeave.Application", "Application\AnnualLeave.Application.csproj", "{C5A44FA0-F84C-4A4E-8F05-6D2BF46025CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{45BD91E3-7B3C-46C0-9D3A-E4B7ADB91452}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{45BD91E3-7B3C-46C0-9D3A-E4B7ADB91452}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{DE641BB2-2843-4AF9-B484-CC408D601F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnnualLeave.Api", "Api\AnnualLeave.Api.csproj", "{DE641BB2-2843-4AF9-B484-CC408D601F5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
