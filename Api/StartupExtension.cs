@@ -1,4 +1,5 @@
-﻿using Application;
+﻿using Api.Middleware;
+using Application;
 using Persistence;
 
 namespace Api
@@ -31,10 +32,11 @@ namespace Api
 
             app.UseHttpsRedirection();
 
+            app.UseCustomExceptionHandler();
+
             app.UseAuthorization();
 
             app.MapControllers();
-
 
             return app;
         }
