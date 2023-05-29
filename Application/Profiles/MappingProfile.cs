@@ -1,4 +1,5 @@
 ﻿using AnnualLeave.Models;
+using Application.Features.Calendars.Commands;
 using Application.Features.Calendars.Queries.GetCalendarList;
 using AutoMapper;
 using System;
@@ -14,6 +15,7 @@ namespace Application.Profiles
         public MappingProfile()
         {
             CreateMap<Calendar,CalendarListVM>().ReverseMap();
+            CreateMap<Calendar,CreateCalanderItemCommand>().ReverseMap(); 
         }
     }
 }

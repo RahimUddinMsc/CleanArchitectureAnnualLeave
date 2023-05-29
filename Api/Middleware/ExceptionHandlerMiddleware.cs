@@ -34,7 +34,11 @@ namespace Api.Middleware
             var result = string.Empty;
 
             switch (exception)
-            {                
+            {
+                case ValidationException validationException:
+                    httpStatusCode = HttpStatusCode.BadRequest;
+                    result = JsonSerializer.Serialize(validationException.ValdationErrors);
+                    break;
                 case BadRequestException badRequestException:
                     httpStatusCode = HttpStatusCode.BadRequest;
                     result = badRequestException.Message;

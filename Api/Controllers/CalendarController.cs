@@ -1,4 +1,5 @@
-﻿using Application.Features.Calendars.Queries.GetCalendarList;
+﻿using Application.Features.Calendars.Commands;
+using Application.Features.Calendars.Queries.GetCalendarList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +25,14 @@ namespace Api.Controllers
             var data = await _mediator.Send(new GetCalendarListQuery());
 
             return Ok(data);
+        }
+
+
+        [HttpPost(Name = "AddCalendarItem")]
+        public async Task<ActionResult<CalendarListVM>> AddCalendarItem([FromBody] CreateCalanderItemCommand createCalendarItemCommand)
+        {
+            var id = await _mediator.Send(createCalendarItemCommand);
+            return Ok(id);
         }
     }
 }
