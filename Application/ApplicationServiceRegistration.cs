@@ -12,7 +12,10 @@ namespace Application
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-            var test = AppDomain.CurrentDomain.GetAssemblies();
+            // Add SignalR
+            services.AddSignalR();
+            
+            // Mediatr
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 

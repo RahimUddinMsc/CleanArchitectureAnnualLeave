@@ -23,7 +23,7 @@ namespace Application.Features.Calendars.Queries.GetCalendarList
 
         public async Task<List<CalendarListVM>> Handle(GetCalendarListQuery request, CancellationToken cancellationToken)
         {
-            var allItems = await _calendarRepo.ListAllAsync();
+            var allItems = await _calendarRepo.ListAllAsync();            
             return _mapper.Map<List<CalendarListVM>>(allItems); 
         }
     }

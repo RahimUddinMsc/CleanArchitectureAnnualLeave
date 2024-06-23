@@ -25,8 +25,7 @@ namespace Application.Features.Calendars.Commands
 
         public async Task<Guid> Handle(CreateCalanderItemCommand request, CancellationToken cancellationToken)
         {
-            var newCalendarItem = _mapper.Map<Calendar>(request);
-
+            var newCalendarItem = _mapper.Map<Calendar>(request);          
             var validator = new CreateCalanderItemCommandValidator();
             var validationResult = await validator.ValidateAsync(request);
             if (validationResult.Errors.Count > 0)

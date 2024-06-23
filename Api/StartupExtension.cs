@@ -1,5 +1,6 @@
 ﻿using Api.Middleware;
 using Application;
+using Infrastructure;
 using Persistence;
 
 namespace Api
@@ -11,6 +12,7 @@ namespace Api
         {
             builder.Services.AddApplicationServices();
             builder.Services.AddPersistenceService(builder.Configuration);
+            builder.Services.AddInfrastructureService();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -28,6 +30,11 @@ namespace Api
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials            
             }
 
             app.UseHttpsRedirection();
@@ -37,6 +44,8 @@ namespace Api
             app.UseAuthorization();
 
             app.MapControllers();
+
+            app.MapHub<NotificationHub>("/NotificationHub");
 
             return app;
         }

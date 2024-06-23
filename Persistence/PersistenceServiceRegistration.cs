@@ -1,4 +1,5 @@
-﻿using Application.Contracts;
+﻿
+using Application.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

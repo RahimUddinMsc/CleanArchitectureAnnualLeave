@@ -8,7 +8,7 @@ namespace Application.Features.Calendars.Queries.GetCalendarList
 {
     public class CalendarListVM
     {
-        public int CalendarId { get; set; }
+        public Guid CalendarId { get; set; }
         public int Day { get; set; }
         public int Month { get; set; }
         public int Year { get; set; }
