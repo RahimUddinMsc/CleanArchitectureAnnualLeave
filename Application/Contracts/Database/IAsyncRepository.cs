@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Contracts
+namespace Application.Contracts.Database
 {
     public interface IAsyncRepository<T> where T : class
     {

@@ -1,14 +1,10 @@
 ﻿using AnnualLeave.Models;
-using Application.Contracts;
+using Application.Contracts.Database;
 using Application.Exceptions;
 using Application.Features.Calendars.Commands.CreateCalendarItem;
 using AutoMapper;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Application.Features.Calendars.Commands
 {
@@ -34,7 +30,7 @@ namespace Application.Features.Calendars.Commands
 
             await _repo.AddAsync(newCalendarItem);
 
-            return newCalendarItem.CalendarId;
+            return newCalendarItem.Id;
         }
     }
 }

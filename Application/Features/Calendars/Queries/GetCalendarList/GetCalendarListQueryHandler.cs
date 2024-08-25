@@ -1,5 +1,5 @@
 ﻿using AnnualLeave.Models;
-using Application.Contracts;
+using Application.Contracts.Database;
 using AutoMapper;
 using MediatR;
 using System;

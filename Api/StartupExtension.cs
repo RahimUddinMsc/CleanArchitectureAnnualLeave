@@ -1,6 +1,6 @@
 ﻿using Api.Middleware;
 using Application;
-using Infrastructure;
+using Application.Contracts.Database;
 using Persistence;
 
 namespace Api

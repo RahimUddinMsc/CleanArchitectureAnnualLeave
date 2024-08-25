@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Domain.Entities;
+using System;
 namespace Domain.Common
 {
-    public class AuditableEntity
+    public class AuditableEntity : Entity
     {
         public string? CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
